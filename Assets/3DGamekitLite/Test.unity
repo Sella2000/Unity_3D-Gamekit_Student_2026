@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731480259}
   - component: {fileID: 731480258}
-  - component: {fileID: 731480257}
+  - component: {fileID: 731480260}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -234,14 +234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &731480257
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731480256}
-  m_Enabled: 1
 --- !u!20 &731480258
 Camera:
   m_ObjectHideFlags: 0
@@ -308,6 +300,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &731480260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731480256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &862178488
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +325,7 @@ GameObject:
   - component: {fileID: 862178493}
   - component: {fileID: 862178492}
   - component: {fileID: 862178491}
+  - component: {fileID: 862178494}
   - component: {fileID: 862178490}
   - component: {fileID: 862178489}
   m_Layer: 0
@@ -410,6 +417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2d033fcfdae4734aad0a747237522b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WS1
+  myNumber: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &862178492
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -427,12 +438,31 @@ Transform:
   m_GameObject: {fileID: 862178488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -227.9, y: 34.1, z: -19}
+  m_LocalPosition: {x: 20, y: 103, z: 923}
   m_LocalScale: {x: 48.331196, y: 41.38407, z: 48.331196}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &862178494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862178488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde94885854244a13af4c3dea3a36df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WS2
+  eventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
