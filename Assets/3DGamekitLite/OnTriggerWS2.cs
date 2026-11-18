@@ -28,8 +28,6 @@ public class OnTriggerWS2 : MonoBehaviour
 {
     public CharacterInformation Character;
     
-    
-    
     public ElementalPower ElementKraft;
 
     public int[] characterInformation;
@@ -54,7 +52,7 @@ public class OnTriggerWS2 : MonoBehaviour
         
         switch (ElementKraft)
         {
-            case ElementalPower.Fire:                 <
+            case ElementalPower.Fire:                 
                 //Run this code
             Debug.Log("Fire");
                 if (true == false)

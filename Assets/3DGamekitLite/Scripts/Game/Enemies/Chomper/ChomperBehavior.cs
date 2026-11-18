@@ -142,18 +142,22 @@ namespace Gamekit3D
                         if (m_FollowerInstance != null)
                             m_FollowerInstance.distributor.UnregisterFollower(m_FollowerInstance);
 
+                            
+
                         m_Target = target;
 
                         TargetDistributor distributor = target.GetComponentInChildren<TargetDistributor>();
                         if (distributor != null)
                             m_FollowerInstance = distributor.RegisterNewFollower();
+                        
+                            
                     }
 
                     m_TimerSinceLostTarget = 0.0f;
                 }
             }
         }
-
+        
         public void StartPursuit()
         {
             if (m_FollowerInstance != null)
@@ -164,12 +168,13 @@ namespace Gamekit3D
 
             m_Controller.animator.SetBool(hashInPursuit, true);
         }
-
+        
         public void StopPursuit()
         {
             if (m_FollowerInstance != null)
             {
                 m_FollowerInstance.requireSlot = false;
+                
             }
 
             m_Controller.animator.SetBool(hashInPursuit, false);
